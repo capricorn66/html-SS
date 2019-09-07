@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../icomoon/fonts/icomoon.eot?4kehwf');
+  src:  url('../icomoon/fonts/icomoon.eot?4kehwf#iefix') format('embedded-opentype'),
+    url('../icomoon/fonts/icomoon.ttf?4kehwf') format('truetype'),
+    url('../icomoon/fonts/icomoon.woff?4kehwf') format('woff'),
+    url('../icomoon/fonts/icomoon.svg?4kehwf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-revert:before {
+  content: "\e914";
+}
+.icon-rubber:before {
+  content: "\e917";
+}
+.icon-envelope:before {
+  content: "\e910";
+}
+.icon-phone:before {
+  content: "\e911";
+}
+.icon-delete:before {
+  content: "\e912";
+}
+.icon-discount:before {
+  content: "\e913";
+}
+.icon-move:before {
+  content: "\e915";
+}
+.icon-edit:before {
+  content: "\e916";
+}
+.icon-computer:before {
+  content: "\e90a";
+}
+.icon-shovel:before {
+  content: "\e90b";
+}
+.icon-snowflake:before {
+  content: "\e90c";
+}
+.icon-snowflake1:before {
+  content: "\e90d";
+}
+.icon-user:before {
+  content: "\e90e";
+}
+.icon-calendar:before {
+  content: "\e90f";
+}
+.icon-cancel:before {
+  content: "\e900";
+}
+.icon-facebook:before {
+  content: "\e901";
+}
+.icon-instagram:before {
+  content: "\e902";
+}
+.icon-left-arrow:before {
+  content: "\e903";
+}
+.icon-menu:before {
+  content: "\e904";
+}
+.icon-placeholder:before {
+  content: "\e905";
+}
+.icon-right-arrow:before {
+  content: "\e906";
+}
+.icon-search:before {
+  content: "\e907";
+}
+.icon-speech-bubble:before {
+  content: "\e908";
+}
+.icon-twitter:before {
+  content: "\e909";
+}

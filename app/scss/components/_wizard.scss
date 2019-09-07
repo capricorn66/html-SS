@@ -1,0 +1,187 @@
+.wizard {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 35px 0 20px 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  @include media-breakpoint-down(sm) {
+    overflow: hidden;
+    padding: 20px 0;
+
+    @for $i from 2 through 6 {
+      &[data-length="#{$i}"] .step-active .step-body {
+        width: $i * 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      &[data-length="#{$i}"] .step-active:nth-child(2) .step-body {
+        margin-left: -100%;
+      }
+      &[data-length="#{$i}"] .step-active:nth-child(3) .step-body {
+        margin-left: -200%;
+      }
+      &[data-length="#{$i}"] .step-active:nth-child(4) .step-body {
+        margin-left: -300%;
+      }
+      &[data-length="#{$i}"] .step-active:nth-child(5) .step-body {
+        margin-left: -400%;
+      }
+      &[data-length="#{$i}"] .step-active:nth-child(6) .step-body {
+        margin-left: -500%;
+      }
+
+      &[data-length="#{$i}"] .step {
+        $l: 100% / $i;
+        width: $l;
+      }
+
+      .step {
+        &.step-done::before,
+        &.step-active::before {
+          background: $app-color-1;
+        }
+        &::before {
+          content: "";
+          display: block;
+          height: 2px;
+          background: $app-color-1;
+        }
+      }
+    }
+  }
+
+  &:not(.wizard-vertical) {
+
+    @for $i from 2 through 6 {
+      @include media-breakpoint-up(md) {
+        &[data-length="#{$i}"] .step::before {
+          $i: $i - 1;
+          $l: 100% / $i;
+          width: #{$l};
+        }
+      }
+      @include media-breakpoint-only(md) {
+        &[data-length="#{$i}"] .step-body {
+          width: 530px / $i;
+        }
+      }
+      @include media-breakpoint-only(lg) {
+        &[data-length="#{$i}"] .step-body {
+          width: 480px / $i;
+        }
+      }
+      @include media-breakpoint-up(xl) {
+        &[data-length="#{$i}"] .step-body {
+          width: 630px / $i;
+        }
+      }
+    }
+    @include media-breakpoint-up(md) {
+      max-width: 80%;
+      .step {
+        &.step-done::before {
+          background: $app-color-1;
+        }
+        &.step-active::after {
+          content: "";
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: $white;
+          border: 3px solid $app-color-1;
+          top: 15px;
+          margin-left: -6px;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 20px;
+          height: 2px;
+          margin-left: 2px;
+          transform: translateX(0);
+        }
+        &:last-child::before {
+          display: none;
+        }
+        &.step-active::before {
+          background: $gray-400;
+        }
+      }
+    }
+
+  }
+
+  .step {
+    text-align: center;
+    width: 0;
+    color: $gray-600;
+    &::before {
+      background: $gray-400;
+    }
+    &.step-done {
+      color: $black;
+      .btn-link {
+        color: $gray-900;
+        &:hover {
+          text-decoration: underline;
+          color: $app-color-1;
+        }
+      }
+    }
+
+    &.step-active {
+      color: $app-color-1;
+      font-weight: 700;
+      .btn-link {
+        color: $app-color-1;
+      }
+    }
+
+
+    .step-body {
+      @include media-breakpoint-up(md) {
+        transform: translateX(-50%);
+      }
+      font-size: 14px;
+    }
+
+    @include media-breakpoint-down(sm) {
+
+      &.step-done .step-body {
+        .btn-link {
+          color: transparent;
+          font-size: 0;
+          display: block;
+          left: 0;
+          width: 30px;
+          height: 30px;
+          padding: 0;
+          background-image: $icon-left-arrow;
+          background-repeat: no-repeat;
+          background-position: top 8px left;
+          position: absolute;
+          top: 30px;
+          z-index: 2;
+        }
+      }
+
+      .step-body {
+        font-size: 0;
+      }
+
+      &.step-active .step-body {
+        display: block;
+        padding-top: 13px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+  }
+}

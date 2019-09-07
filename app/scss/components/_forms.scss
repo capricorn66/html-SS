@@ -1,0 +1,7 @@
+/* forms
+*******************************************************************/
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: $app-color-2;
+}

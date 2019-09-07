@@ -1,0 +1,180 @@
+/* buttons
+*******************************************************************/
+
+.btn-primary {
+    background: $app-color-1;
+    border: 1px solid $app-color-1;
+    color: white;
+    &:active,
+    &:focus,
+    &:hover {
+        background: $white !important;
+        color: $app-color-1 !important;
+        border: 1px solid $app-color-1 !important;
+        box-shadow: none;
+    }
+}
+
+.btn-secondary {
+    background: $app-color-2;
+    border: 1px solid $app-color-2;
+    color: white;
+    &:active,
+    &:focus,
+    &:hover {
+        background: $white !important;
+        color: $app-color-2 !important;
+        border: 1px solid $app-color-2 !important;
+        box-shadow: none;
+    }
+}
+
+.btn-white {
+    border: 0;
+    background: white;
+    border-bottom: 4px solid white;
+    color: black;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    &:focus,
+    &:hover {
+        border-bottom: 4px solid $app-color-1;
+        color: black;
+        text-decoration: none;
+        box-shadow: none;
+    }
+}
+
+.btn-outline-white {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    &:focus,
+    &:hover {
+        background: white;
+        color: black;
+        box-shadow: none;
+    }
+}
+
+.btn-black {
+    background: black;
+    border: 1px solid black;
+    color: white;
+    i {
+        color: $app-color-1;
+    }
+    &:focus,
+    &:hover {
+        background: transparent;
+        border: 1px solid black;
+        color: black;
+        box-shadow: none;
+    }
+}
+
+.btn-outline-black {
+    background: transparent;
+    border: 1px solid black;
+    color: black;
+    i {
+        color: $app-color-1;
+    }
+    &:focus,
+    &:hover {
+        border: 1px solid $app-color-1;
+        background: $app-color-1;
+        color: white;
+        box-shadow: none;
+        i {
+            color: white;
+        }
+    }
+}
+
+.btn {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 18px;
+    font-weight: 500;
+    transition: all linear .2s;
+
+    &.btn-lg {
+        padding: 10px 25px;
+        border-radius: 22px;
+        font-size: 16px;
+    }
+
+    &.btn-sm {
+        border-radius: 14px;
+    }
+
+    &:focus,
+    &:hover {
+        text-decoration: none !important;
+    }
+}
+
+.btn {
+    &.btn-link {
+        color: $app-color-1;
+        font-weight: 600;
+    }
+}
+
+.input-group-lg > .form-control,
+.input-group-lg > .custom-select,
+.input-group-lg > .input-group-prepend > .input-group-text,
+.input-group-lg > .input-group-append > .input-group-text,
+.input-group-lg > .input-group-prepend > .btn,
+.input-group-lg > .input-group-append > .btn {
+    border-radius: 22px;
+}
+
+.input-group > .form-control,
+.input-group > .custom-select,
+.input-group > .input-group-prepend > .input-group-text,
+.input-group > .input-group-append > .input-group-text,
+.input-group > .input-group-prepend > .btn,
+.input-group > .input-group-append > .btn {
+    border-radius: 18px;
+}
+
+.input-group-sm > .form-control,
+.input-group-sm > .custom-select,
+.input-group-sm > .input-group-prepend > .input-group-text,
+.input-group-sm > .input-group-append > .input-group-text,
+.input-group-sm > .input-group-prepend > .btn,
+.input-group-sm > .input-group-append > .btn {
+    border-radius: 14px;
+}
+
+
+.input-group-lg > .input-group-prepend > .btn,
+.input-group-lg > .input-group-append > .btn {
+    padding: 10px 20px 10px 25px;
+    font-size: 16px;
+}
+
+.input-group > .input-group-prepend > .btn,
+.input-group > .input-group-append > .btn {
+    padding-left: 15px;
+    padding-right: 20px;
+}
+
+.input-group-sm > .input-group-prepend > .btn,
+.input-group-sm > .input-group-append > .btn {
+    padding-left: 10px;
+    padding-right: 15px;
+}
+
+
+.input-group > .input-group-append > .btn,
+.input-group > .input-group-append > .input-group-text,
+.input-group > .input-group-prepend:not(:first-child) > .btn,
+.input-group > .input-group-prepend:not(:first-child) > .input-group-text,
+.input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+.input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

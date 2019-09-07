@@ -1,0 +1,138 @@
+/* jumbotron
+*******************************************************************/
+
+.jumbotron-sm {
+    height: 70px;
+}
+
+.jumbotron {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    height: 480px;
+    @media (max-width: 575px) {
+        background-size: 120%;
+        background-position: center top;
+    }
+    @media (min-width: 576px) {
+        height: 500px;
+    }
+    @media (min-width: 768px) {
+        height: 540px;
+    }
+    @media (min-width: 992px) {
+        height: 580px;
+    }
+    @media (min-width: 1200px) {
+        height: 620px;
+    }
+
+    &.jumbotron-sm {
+        height: 130px;
+        &::after {
+            display: none;
+        }
+    }
+
+    .flurry-container {
+        opacity: .5;
+    }
+
+    border-radius: 0;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    @media (min-width: 576px) {
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    -ms-flex-align: end;
+    align-items: end;
+
+    padding: 0;
+    margin: 0;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 15px;
+        width: 40vw;
+        background: rgba($app-color-2,.6);
+        z-index: 11;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 25px;
+        width: 40vw;
+        background: rgba($app-color-2,.7);
+        @media (max-width: 575px) {
+            display: none;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .container {
+            background: $app-color-3;
+        }
+    }
+
+    .jumbotron-body {
+        background: $app-color-3;
+        padding: 30px 15px;
+        @media (min-width: 576px) {
+            padding: 30px 40px;
+            background: rgba($app-color-3,.8);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: calc(100% - 15px);
+            height: 100%;
+            background: $app-color-3;
+            width: 15px;
+
+            @media (min-width: 576px) {
+                width: calc( (100vw - 510px) / 2 );
+                background: rgba($app-color-3,.8);
+            }
+            @media (min-width: 768px) {
+                width: calc( (100vw - 690px) / 2 );
+            }
+            @media (min-width: 992px) {
+                width: calc( (100vw - 930px) / 2 );
+            }
+            @media (min-width: 1200px) {
+                width: calc( (100vw - 1110px) / 2 );
+            }
+        }
+    }
+
+    h1 {
+        color: white;
+        font-weight: 700;
+        position: relative;
+        font-size: 20px;
+        line-height: 1.4em;
+        margin-bottom: 30px;
+        @media (min-width: 768px) {
+            font-size: 28px;
+            margin-bottom: 40px;
+            font-weight: 800;
+        }
+        @media (min-width: 992px) {
+            font-size: 32px;
+            margin-bottom: 50px;
+            font-weight: 900;
+        }
+        @media (min-width: 1200px) {
+            font-size: 36px;
+            margin-bottom: 60px;
+        }
+    }
+}

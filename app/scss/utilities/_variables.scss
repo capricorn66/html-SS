@@ -1,0 +1,32 @@
+// Default colors
+
+$white: #FFF;
+$black: #0c0c0c;
+
+$gray-100: #F6F6F6;
+$gray-200: #e9e9e9;
+$gray-300: #e2e2e2;
+$gray-400: #a7a9ac;
+$gray-500: #888;
+$gray-600: #676767;
+$gray-700: #585858;
+$gray-800: #2d2d2d;
+$gray-900: #232323;
+
+$alert-red: #ff4200;
+$alert-green: #559f4f;
+$alert-yellow: #ffd300;
+$alert-blue: #0b7bb9;
+
+//primary colors
+
+$app-color-1: #7fb529;
+$app-color-2: #3287f0;
+$app-color-3: #415c6f;
+$app-color-4: #B0DFE5;
+$app-color-5: #222f38;
+
+// Components
+
+$icon-left-arrow:               url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23a9a9ab' d='M6,8.8L2.3,5L6,1.2L4.9,0L0,5l4.9,5L6,8.8z'/%3E%3C/svg%3E") !default;
+$icon-right-arrow:              url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 24 24'%3E%3Cpath fill='%23a9a9ab' d='M0,1.2L3.7,5L0,8.8L1.1,10L6,5L1.1,0L0,1.2z'/%3E%3C/svg%3E") !default;

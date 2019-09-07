@@ -1,0 +1,54 @@
+/* footer
+*******************************************************************/
+
+footer {
+    padding: 60px 0 0;
+    background-color: $gray-800;
+    color: $white;
+    margin-top: auto;
+    h5 {
+        margin-bottom: 30px;
+        color: $app-color-1;
+    }
+    p {
+        font-size: 13px;
+        margin-bottom: 30px;
+        font-weight: 300;
+    }
+
+    .nav {
+        display: block;
+        .nav-item {
+            display: block;
+            .nav-link {
+                font-size: 14px;
+                color: $white;
+                padding: 8px 0;
+                border-bottom: 1px solid $gray-800;
+            }
+        }
+    }
+
+    .social-nav {
+        img {
+            width: 40px;
+            height: auto;
+            margin-right: 15px;
+        }
+    }
+
+    .extraImg {
+        width: 55px;
+        height: auto;
+    }
+
+    .footer-bottom {
+        padding: 15px 0;
+        color: $gray-400;
+        font-size: 12px;
+        a {
+            color: $white;
+        }
+    }
+
+}

@@ -1,0 +1,153 @@
+/* header
+*******************************************************************/
+
+header {
+    .navbar-top {
+        background-color: $black;
+        color: $gray-500;
+        text-align: right;
+        font-size: 11px;
+        letter-spacing: 1px;
+        padding: 4px 0 6px;
+        a {
+            transition: opacity linear .3s;
+            color: $gray-500;
+            text-decoration: none;
+            &:hover {
+                color: $gray-500;
+                opacity: .8;
+            }
+        }
+        i {
+            font-size: 14px;
+            margin: -2px 4px 0 16px;
+        }
+    }
+    .navbar {
+        padding: 14px 0 16px;
+        background: $gray-800;
+        .navbar-brand {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 0;
+            img {
+                width: 270px;
+                height: auto;
+            }
+            .logo {
+                height: auto;
+                width: 80px;
+                margin-right: 20px;
+            }
+            .brand {
+                height: auto;
+                width: 240px;
+            }
+
+            @media (max-width: 575px) {
+                margin-right: 0;
+                .logo {
+                    width: 50px;
+                    margin-right: 10px;
+                }
+                .brand {
+                    width: 165px;
+                }
+            }
+
+            @media (min-width: 992px) {
+                .logo {
+                    width: 70px;
+                    margin-right: 16px;
+                }
+                .brand {
+                    width: 200px;
+                }
+            }
+            @media (min-width: 1200px) {
+                .logo {
+                    width: 80px;
+                    margin-right: 20px;
+                }
+                .brand {
+                    width: 240px;
+                }
+            }
+        }
+
+        .collapsing,
+        .collapse {
+            @media (max-width: 991px) {
+                .btn {
+                    display: none;
+                }
+            }
+        }
+
+        .navbar-nav {
+            margin-right: -15px;
+            border-radius: 0 !important;
+            .nav-item {
+                &.active {
+                    .nav-link {
+                        color: $app-color-1
+                    }
+                }
+                .nav-link {
+                    color: $white;
+                    transition: color linear .3s;
+                    font-size: 14px;
+                    padding-right: 15px;
+                    padding-left: 15px;
+                    @media (max-width: 991px) {
+                        border-bottom: 1px solid $gray-800;
+                    }
+                    &:hover {
+                        color: $app-color-1
+                    }
+                }
+            }
+            @media (max-width: 991px) {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                background: $gray-900;
+                padding: 15px;
+                border-radius: 8px;
+            }
+        }
+
+        .navbar-toggler {
+            color: $white;
+            i {
+                font-size: 40px;
+            }
+            @media (max-width: 575px) {
+                margin-right: 0;
+            }
+        }
+    }
+
+
+    @media (min-width: 576px) {
+
+
+    }
+
+    @media (min-width: 768px) {
+
+
+    }
+
+    @media (min-width: 992px) {
+
+
+    }
+
+    @media (min-width: 1200px) {
+
+    }
+
+
+}

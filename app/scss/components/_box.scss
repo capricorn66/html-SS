@@ -1,0 +1,136 @@
+/* box
+*******************************************************************/
+
+.box-block {
+    &.box-block-stisky {
+        position: sticky;
+        top: 20px;
+    }
+    background: $white;
+    border-radius: 12px;
+    h1 {
+        color: $app-color-1;
+        font-size: 26px;
+    }
+    h2 {
+        color: $black;
+        font-size: 20px;
+    }
+    .lead {
+        color: $gray-400;
+        font-size: 14px;
+        margin-bottom: 30px;
+        + hr {
+            margin-top: -10px
+        }
+    }
+    .box-block-body {
+        padding: 30px;
+
+    }
+    .box-block-footer {
+        &:last-child {
+            border-radius: 0 0 12px 12px;
+        }
+        padding: 15px 30px;
+        background-color: $gray-200;
+    }
+    .box-block-info {
+        &:last-child {
+            border-radius: 0 0 12px 12px;
+        }
+        padding: 15px 30px;
+        background-color: $app-color-2;
+        color: $white;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4em;
+        small {
+            display: block;
+            line-height: 1.4em;
+            font-weight: 400;
+        }
+    }
+    .box-block-map {
+        margin-bottom: 10px;
+        .box-block-map-control {
+            padding: 10px 5px;
+            background-color: $gray-200;
+            display: -ms-flexbox;
+            display: flex;
+            .control-item {
+                display: inline-block;
+                padding: 5px 10px;
+                font-size: 12px;
+                cursor: pointer;
+                i {
+                    color: $app-color-2;
+                    font-size: 18px;
+                    margin: 0 3px;
+                }
+            }
+
+        }
+    }
+    .box-block-discount {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        color: $gray-700;
+        font-size: 14px;
+        margin-bottom: 70px;
+        i {
+            font-size: 40px;
+            color: $app-color-1;
+            margin-right: 15px;
+            margin-top: 4px;
+        }
+        p {
+            margin-bottom: 0;
+            line-height: 1.2em;
+        }
+    }
+    .box-block-basket {
+        color: $gray-500;
+        .box-block-basket-item {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            padding: 5px 0;
+            .box-block-basket-item-name {
+
+            }
+            .box-block-basket-item-price {
+                font-size: 18px;
+            }
+        }
+        .box-block-basket-summery {
+            margin: 10px -30px -15px;
+            padding: 20px 30px;
+            border-top: 1px solid $gray-300;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            .box-block-basket-item-name {
+
+            }
+            .box-block-basket-item-price {
+                color: $black;
+                font-size: 32px;
+                font-weight: 600;
+                small {
+                    font-weight: 500;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
