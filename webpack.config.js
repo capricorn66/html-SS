@@ -18,6 +18,7 @@ const htmlIndex = generateHtml('index');
 const htmlBlog = generateHtml('blog');
 const htmlArticle = generateHtml('article');
 const htmlWizard123 = generateHtml('wizard-123');
+const htmlWizard123_2 = generateHtml('wizard-123-2');
 const htmlWizard4 = generateHtml('wizard-4');
 const htmlLogin = generateHtml('login');
 const htmlRegistration = generateHtml('registration');
@@ -64,6 +65,7 @@ module.exports = (env, options) => {
             .concat(htmlBlog)
             .concat(htmlArticle)
             .concat(htmlWizard123)
+            .concat(htmlWizard123_2)
             .concat(htmlWizard4)
             .concat(htmlLogin)
             .concat(htmlRegistration)

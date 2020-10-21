@@ -1,8 +1,29 @@
 .table {
+  @include media-breakpoint-down(sm) {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    margin-right: -15px;
+  }
   tr td {
     border-top: 0;
     border-bottom: 1px solid $gray-400;
     color: $gray-700;
     padding: 25px 15px 30px;
+    @include media-breakpoint-down(sm) {
+      padding: 10px 15px;
+      display: block;
+      border-bottom: 1px solid $gray-200;
+      &:first-child {
+        padding-top: 20px;
+      }
+      &:last-child {
+        border-bottom: 1px solid $gray-100;
+        background-color: $gray-100;
+        padding-bottom: 10px;
+        padding-top: 10px;
+      }
+    }
   }
+
+
 }

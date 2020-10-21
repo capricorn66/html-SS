@@ -5,9 +5,11 @@
     border-color: $app-color-1;
     background-color: $app-color-1;
 }
+
 .custom-switch .custom-control-label::after {
     background-color: $black;
 }
+
 .custom-control-label::before {
     border-color: $black;
 }
@@ -19,6 +21,12 @@
 .custom-control-input:focus ~ .custom-control-label::before {
     box-shadow: 0 0 0 0.2rem rgba($app-color-1, 0.25);
 }
+
 .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
     background-color: rgba($app-color-1, .4);
+    border-color: rgba($app-color-1, .4);
+}
+
+.custom-control-input:disabled ~ .custom-control-label::before {
+    border-color: $gray-300;
 }

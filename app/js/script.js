@@ -1,24 +1,60 @@
 // JavaScript Document
-var rwdMedia = {
-    bs4_xs: function() {
-        return document.getElementsByClassName("bs4-xs")[0].offsetParent ? !null : null;
-    },
-    bs4_sm: function() {
-        return document.getElementsByClassName("bs4-sm")[0].offsetParent ? !null : null;
-    },
-    bs4_md: function() {
-        return document.getElementsByClassName("bs4-md")[0].offsetParent ? !null : null;
-    },
-    bs4_lg: function() {
-        return document.getElementsByClassName("bs4-lg")[0].offsetParent ? !null : null;
-    },
-    bs4_xl: function() {
-        return document.getElementsByClassName("bs4-xl")[0].offsetParent ? !null : null;
-    },
-    bs4_xxl: function() {
-        return document.getElementsByClassName("bs4-xxl")[0].offsetParent ? !null : null;
+const rwdMedia = {};
+
+['xs', 'sm', 'md', 'lg', 'xl'].map( bp =>
+    rwdMedia[bp] = () => document.querySelector(`.bs4-${bp}`).offsetParent !== null
+);
+
+function toggleImg(img) {
+    const $imgSet = document.getElementById(img).parentNode.children;
+    for (let i = 0; i < $imgSet.length; i++) $imgSet[i].style.display="none";
+    document.getElementById(img).style.display="block";
+}
+
+window.toggleImg = toggleImg;
+
+
+function toggleRadio(radioSet, state, imgSet) {
+    const radio = document.querySelectorAll(`[name="${radioSet}"]`)
+    if (state) {
+        radio.forEach( radio => { radio.disabled = false })
+    } else {
+        console.log(radio);
+        radio.forEach( radio => {
+            radio.disabled = true;
+            radio.checked = false;
+        })
+
+        if (imgSet) {
+            const $imgSet = document.getElementById(imgSet).children;
+            for (let i = 0; i < $imgSet.length; i++) $imgSet[i].style.display="none";
+        }
     }
-};
+
+}
+
+window.toggleRadio = toggleRadio;
+
+
+function toggleMapControl(event, elem,  mapId) {
+
+    event.preventDefault();
+
+    const $mapId = document.getElementById(mapId);
+    if ($mapId.style.display === "none") {
+        $mapId.style.display = "block";
+        elem.children[0].style.display="none";
+        elem.children[1].style.display="block";
+    } else {
+        $mapId.style.display = "none";
+        elem.children[0].style.display="block";
+        elem.children[1].style.display="none";
+    }
+}
+
+window.toggleMapControl = toggleMapControl;
+
+
 
 $(document).ready(function(e) {
 

@@ -6,16 +6,28 @@
         position: sticky;
         top: 20px;
     }
+
     background: $white;
     border-radius: 12px;
+    @include media-breakpoint-down(sm) {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    @include media-breakpoint-down(xs) {
+        border-radius: 0;
+    }
+
     h1 {
         color: $app-color-1;
         font-size: 26px;
     }
+
     h2 {
         color: $black;
         font-size: 20px;
     }
+
     .lead {
         color: $gray-400;
         font-size: 14px;
@@ -24,18 +36,42 @@
             margin-top: -10px
         }
     }
+
     .box-block-body {
         padding: 30px;
-
+        @include media-breakpoint-down(sm) {
+            padding: 30px 15px;
+        }
     }
+
     .box-block-footer {
         &:last-child {
             border-radius: 0 0 12px 12px;
+            @include media-breakpoint-down(xs) {
+                border-radius: 0;
+            }
         }
         padding: 15px 30px;
+        @include media-breakpoint-down(sm) {
+            padding: 15px
+        }
         background-color: $gray-200;
     }
+
+    .box-block-tip {
+        padding: 15px 30px;
+        background-color: $gray-200;
+        color: lighten($gray-500,5%);
+        border-radius: 12px;
+        strong {
+            color: $gray-600;
+        }
+    }
+
     .box-block-info {
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
         &:last-child {
             border-radius: 0 0 12px 12px;
         }
@@ -52,18 +88,32 @@
             font-weight: 400;
         }
     }
+
     .box-block-map {
         margin-bottom: 10px;
+        @include media-breakpoint-down(sm) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
         .box-block-map-control {
-            padding: 10px 5px;
+            padding: 10px 5px 0 5px;
             background-color: $gray-200;
             display: -ms-flexbox;
             display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
             .control-item {
                 display: inline-block;
                 padding: 5px 10px;
                 font-size: 12px;
                 cursor: pointer;
+                white-space: nowrap;
+                margin: 0 5px 10px;
+                background-color: $gray-100;
+                border-radius: 18px;
+                border: 0;
                 i {
                     color: $app-color-2;
                     font-size: 18px;

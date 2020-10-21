@@ -5,3 +5,31 @@
     box-shadow: none;
     border-color: $app-color-2;
 }
+.form-control.is-valid, .was-validated .form-control:valid {
+    background: none;
+    border-color: $app-color-1;
+    box-shadow: none;
+}
+.form-control.is-invalid, .was-validated .form-control:invalid {
+    background: none;
+    border-color: $alert-red;
+    box-shadow: none;
+}
+
+.form-control.is-invalid:focus,
+.form-control.is-invalid:valid:focus {
+    //border-color: $app-color-2;
+    box-shadow: none;
+}
+.form-control.is-invalid:invalid:focus {
+    //border-color: $alert-red;
+    box-shadow: none;
+}
+.form-control.is-invalid:valid {
+    //border-color: #ced4da;
+    box-shadow: none;
+}
+
+.invalid-feedback {
+    color: $alert-red;
+}

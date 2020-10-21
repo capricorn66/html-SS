@@ -11,6 +11,7 @@
 // Optional
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/alert";
 @import "~bootstrap/scss/type";
 @import "~bootstrap/scss/images";
 @import "~bootstrap/scss/grid";
@@ -32,6 +33,7 @@
 @import "~bootstrap/scss/modal";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/print";
+@import "~bootstrap/scss/toasts";
 
 
 // utilities
@@ -61,5 +63,6 @@
 @import "components/custom-form";
 @import "components/forms";
 @import "components/table";
+@import "components/toasts";
 
 

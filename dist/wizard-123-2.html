@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap&subset=latin-ext" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<link href="css/app.5658f8312f296bf95fd0.min.css" rel="stylesheet"></head>
+<body>
+
+    <header>
+        <div class="navbar-top">
+            <div class="container">
+                <span>
+                    <i class="icon-phone"></i>
+                    (604) 449-9940
+                </span>
+                <span>
+                    <i class="icon-envelope"></i>
+                    <a href="mainlto:info@shovelsquad.ca">info@shovelsquad.ca</a>
+                </span>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg">
+
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/shovelsquad-brand-header.png" alt="shovelsquad">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="icon-menu"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="javascript:void(0);">Book now</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="javascript:void(0);">My Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);">Edit Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="container">
+
+            <div class="wizard" data-length="5">
+                <div class="step step-done">
+                    <div class="step-body">
+                        <a href="" class="btn-link">Select Location</a>
+                    </div>
+                </div>
+                <div class="step step-active">
+                    <div class="step-body">
+                        <a href="" class="btn-link">Booking Details</a>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-body">Account Creation</div>
+                </div>
+                <div class="step">
+                    <div class="step-body">Order Summary</div>
+                </div>
+                <div class="step">
+                    <div class="step-body">Finish</div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-4 order-lg-1">
+
+                    <div class="box-block box-block-stisky mb-50">
+                        <div class="box-block-tip">
+                            <p><strong>Step 1</strong>: Property Metrics</p>
+                            <p>Please try and select the details of your property, these details will help us validate your order and create a aaccourate map of your service area.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-8">
+
+                    <div class="box-block mb-50">
+                        <div class="box-block-body">
+                            <h1>Location</h1>
+                            <label>Select new address or choose from existing</label>
+                            <div class="input-group input-group-lg">
+                                <input type="text" class="form-control" placeholder="">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button">FIND</button>
+                                </div>
+                            </div>
+                            <div class="mb-25">
+                                <small  class="text-muted">
+                                    Note: we’re currently only servicing the Burke Mountain, Coquitlam neighbourhood.
+                                </small>
+                            </div>
+	                        <div class="mb-50">
+	                            <p>or choose from existing location:</p>
+	                            <a href="" class="btn btn-secondary btn-sm" role="button">address 1</a>
+	                            <a href="" class="btn btn-secondary btn-sm" role="button">address 2</a>
+	                        </div>
+
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <div class="box-block-map">
+                                        <div class="box-block-map-control" id="map-control" style="display: none">
+                                            <div class="control-item">
+                                                <i class="icon-move"></i> move
+                                            </div>
+                                            <div class="control-item">
+                                                <i class="icon-edit"></i> draw
+                                            </div>
+                                            <div class="control-item">
+                                                <i class="icon-rubber"></i> remove last
+                                            </div>
+                                            <div class="control-item ml-auto">
+                                                start over <i class="icon-revert"></i>
+                                            </div>
+                                        </div>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d39645.57010984498!2d15.078183879101562!3d51.60767119999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1567858904284!5m2!1spl!2spl" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+                            Advanced User (Optional):
+                            <a href="" class="btn btn-secondary btn-sm" role="button" onclick="toggleMapControl(event, this, 'map-control')">
+                                <span>Draw Service Area</span>
+                                <span style="display: none">hide map Draw Area</span>
+                            </a>
+
+                            <hr>
+
+	                        <div class="form-inline mb-50">
+		                        <label class="my-1 mr-2" for="">Save new location</label>
+		                        <div class="input-group input-group-sm">
+			                        <input type="text" class="form-control" placeholder="">
+			                        <div class="input-group-append">
+				                        <button class="btn btn-secondary" type="button">SAVE</button>
+			                        </div>
+		                        </div>
+	                        </div>
+
+
+
+                            <h1>Property Metrics</h1>
+                            <h2>Driveway:</h2>
+                            <hr>
+                            <div class="pl-30 pb-30">
+
+                                <p>Does your residance have a driveway?</p>
+
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" name="radioDriveway" id="radioDriveway-yes" onchange="toggleRadio('radioDrivewaySize', false, 'driveway-img')" class="custom-control-input">
+                                    <label class="custom-control-label" for="radioDriveway-yes">No</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" name="radioDriveway" id="radioDriveway-no" onchange="toggleRadio('radioDrivewaySize', true)" class="custom-control-input">
+                                    <label class="custom-control-label" for="radioDriveway-no">Yes</label>
+                                </div>
+                                <div class="clearfix mb-30"></div>
+
+
+                                <p>Approximately how big is your driveway</p>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-30">
+                                        <div class="custom-control custom-radio mb-5">
+                                            <input type="radio" name="radioDrivewaySize" id="drivewaySize-sm" class="custom-control-input" disabled onchange="toggleImg('driveway-sm')">
+                                            <label class="custom-control-label" for="drivewaySize-sm">Small (Fits 1-2 cars)</label>
+                                        </div>
+                                        <div class="custom-control custom-radio mb-5">
+                                            <input type="radio" name="radioDrivewaySize" id="drivewaySize-md" class="custom-control-input" disabled onchange="toggleImg('driveway-md')">
+                                            <label class="custom-control-label" for="drivewaySize-md">Medium (Fits 3-5 cars)</label>
+                                        </div>
+                                        <div class="custom-control custom-radio mb-5">
+                                            <input type="radio" name="radioDrivewaySize" id="drivewaySize-lg" class="custom-control-input" disabled onchange="toggleImg('driveway-lg')">
+                                            <label class="custom-control-label" for="drivewaySize-lg">Large (Fits 5-8 cars)</label>
+                                        </div>
+                                        <div class="custom-control custom-radio mb-5">
+                                            <input type="radio" name="radioDrivewaySize" id="drivewaySize-xl" class="custom-control-input" disabled onchange="toggleImg('driveway-xl')">
+                                            <label class="custom-control-label" for="drivewaySize-xl">Very Large (Fits 9+ cars)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 mb-30" id="driveway-img">
+                                        <img src="images/driveway_sm.jpg" class="img-fluid" id="driveway-sm" style="display: none"/>
+                                        <img src="images/driveway_md.jpg" class="img-fluid" id="driveway-md" style="display: none"/>
+                                        <img src="images/driveway_lg.jpg" class="img-fluid" id="driveway-lg" style="display: none"/>
+                                        <img src="images/driveway_xl.jpg" class="img-fluid" id="driveway-xl" style="display: none"/>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <h2>City Sidewalk:</h2>
+                            <hr>
+                            <div class="pl-30 pb-30">
+
+                                <p>Is there a city sidewalk attached to your residence?</p>
+
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" name="radioSidewalk" id="radioSidewalk-yes" onchange="toggleRadio('radioSidewalkSize', false, 'sidewalk-img')" class="custom-control-input">
+                                    <label class="custom-control-label" for="radioSidewalk-yes">No</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" name="radioSidewalk" id="radioSidewalk-no" onchange="toggleRadio('radioSidewalkSize', true)" class="custom-control-input">
+                                    <label class="custom-control-label" for="radioSidewalk-no">Yes</label>
+                                </div>
+                                <div class="clearfix mb-30"></div>
+
+
+                                <p>Approximately how long is the city sidewalk</p>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-30">
+                                        <div class="custom-control custom-radio mb-5">
+                                            <input type="radio" name="radioSidewalkSize" id="sidewalkSize-xs" class="custom-control-input" disabled onchange="toggleImg('sidewalk-xs')">
+                                            <label class="custom-control-label" for="sidewalkSize-xs">Very Short (30ft or less)</label>
+                                        </div>
+                                        <div class="custom-control custom-radio mb-5">
+                                            <input type="radio" name="radioSidewalkSize" id="sidewalkSize-sm" class="custom-control-input" disabled onchange="toggleImg('sidewalk-sm')">
+                                            <label class="custom-control-label" for="sidewalkSize-sm">Short (30-60ft)</label>
+                                        </div>
+                                        <div class="custom-control custom-radio mb-5">
+                                            <input type="radio" name="radioSidewalkSize" id="sidewalkSize-md" class="custom-control-input" disabled onchange="toggleImg('sidewalk-md')">
+                                            <label class="custom-control-label" for="sidewalkSize-md">Medium (60-90ft)</label>
+                                        </div>
+                                        <div class="custom-control custom-radio mb-5">
+                                            <input type="radio" name="radioSidewalkSize" id="sidewalkSize-lg" class="custom-control-input" disabled onchange="toggleImg('sidewalk-lg')">
+                                            <label class="custom-control-label" for="sidewalkSize-lg">Long (80-120ft)</label>
+                                        </div>
+                                        <div class="custom-control custom-radio mb-5">
+                                            <input type="radio" name="radioSidewalkSize" id="sidewalkSize-xl" class="custom-control-input" disabled onchange="toggleImg('sidewalk-xl')">
+                                            <label class="custom-control-label" for="sidewalkSize-xl">Very Long (120ft and longer)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-10 col-md-6 mb-30" id="sidewalk-img">
+                                        <img src="images/sidewalk_xs.jpg" class="img-fluid" id="sidewalk-xs" style="display: none"/>
+                                        <img src="images/sidewalk_sm.jpg" class="img-fluid" id="sidewalk-sm" style="display: none"/>
+                                        <img src="images/sidewalk_md.jpg" class="img-fluid" id="sidewalk-md" style="display: none"/>
+                                        <img src="images/sidewalk_lg.jpg" class="img-fluid" id="sidewalk-lg" style="display: none"/>
+                                        <img src="images/sidewalk_xl.jpg" class="img-fluid" id="sidewalk-xl" style="display: none"/>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <h2>Internal Walkways:</h2>
+                            <hr>
+                            <div class="pl-30 pb-30">
+
+                                <p>Does your residence have internal walkways you need serviced?</p>
+
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" name="radioWalkways" id="radioWalkways-yes" onchange="toggleRadio('radioWalkwaysServiced', false)" class="custom-control-input">
+                                    <label class="custom-control-label" for="radioWalkways-yes">No</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" name="radioWalkways" id="radioWalkways-no" onchange="toggleRadio('radioWalkwaysServiced', true)" class="custom-control-input">
+                                    <label class="custom-control-label" for="radioWalkways-no">Yes</label>
+                                </div>
+                                <div class="clearfix mb-30"></div>
+
+
+                                <p>Please specify which walkways you need serviced</p>
+
+                                <div class="custom-control custom-radio mb-5">
+                                    <input type="radio" name="radioWalkwaysServiced" id="walkwaysServiced-entrance" class="custom-control-input" disabled>
+                                    <label class="custom-control-label" for="walkwaysServiced-entrance">Entrance Walkway</label>
+                                </div>
+                                <div class="custom-control custom-radio mb-5">
+                                    <input type="radio" name="radioWalkwaysServiced" id="walkwaysServiced-back" class="custom-control-input" disabled>
+                                    <label class="custom-control-label" for="walkwaysServiced-back">Back Walkway</label>
+                                </div>
+                                <div class="custom-control custom-radio mb-5">
+                                    <input type="radio" name="radioWalkwaysServiced" id="walkwaysServiced-side" class="custom-control-input" disabled>
+                                    <label class="custom-control-label" for="walkwaysServiced-side">Side Walkway</label>
+                                </div>
+                                <div class="custom-control custom-radio mb-5">
+                                    <input type="radio" name="radioWalkwaysServiced" id="walkwaysServiced-backyard" class="custom-control-input" disabled>
+                                    <label class="custom-control-label" for="walkwaysServiced-backyard">Backyard Walkway</label>
+                                </div>
+                                <div class="clearfix mb-30"></div>
+
+                            </div>
+
+                        </div>
+                        <div class="box-block-footer text-right">
+                            <a href="" class="btn btn-primary d-block d-sm-inline-block btn-lg ml-sm-auto">NEXT STEP</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row justify-content-lg-between">
+                <div class="col-8 col-sm-6 col-md-5 col-lg-4 mb-20">
+                    <img src="images/shovelsquad-brand-footer.png" alt="shovelsquad" class="img-fluid mb-60">
+                    <p>Shovel Squad specializes in residential snow removal on privately owned properties. We service driveways, stairs, sidewalks and walkways. We’re a large network of local men and woman on call 24 hours a day, 7 days a week to assist with your winter needs. Anywhere you need snow cleared and de-icing, we can help!</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-6 mb-40">
+
+                            <h5>Proud to be Serving:</h5>
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Port Coquitlam</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Coquitlam</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Port Moody</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">North Shore</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="col-lg-6 mb-40">
+
+                            <h5>Navigate:</h5>
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Book a Squad!</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Commercial Solutions</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Join Our Team</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container d-flex">
+                SNOW QUEEN Copyright © 2019
+
+                <span class="ml-auto">Terms and Conditions</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="bs4-xs d-block d-sm-none"></div>
+    <div class="bs4-sm d-none d-sm-block d-md-none"></div>
+    <div class="bs4-md d-none d-md-block d-lg-none"></div>
+    <div class="bs4-lg d-none d-lg-block d-xl-none"></div>
+    <div class="bs4-xl d-none d-xl-block"></div>
+<script type="text/javascript" src="js/vendor.08c97b440cc23623e618.min.js"></script><script type="text/javascript" src="js/swiper.0d0e191f17e32a4260ed.min.js"></script><script type="text/javascript" src="js/app.5658f8312f296bf95fd0.min.js"></script></body>
+</html>
