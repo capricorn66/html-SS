@@ -1,7 +1,5 @@
-// Swiper 4.5.0
-import Swiper from "swiper";
-window.Swiper = Swiper;
+import './plugins/hasAttr';
+import './plugins/scrollTo';
+import {rwdMedia} from './plugins/rwdMedia';
 
-// flurry 1.1.0
-import flurry from "./flurry/jquery.flurry.js";
-window.flurry = flurry;
+window.rwdMedia = rwdMedia;

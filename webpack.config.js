@@ -35,7 +35,7 @@ module.exports = (env, options) => {
 
         entry: {
             vendor: './app/js/vendor.js',
-            swiper: './app/js/plugins.js',
+            plugins: './app/js/plugins.js',
             app: './app/app.js',
         },
 
@@ -48,6 +48,7 @@ module.exports = (env, options) => {
             new CopyPlugin([
                 { from: './app/icomoon/fonts', to: 'fonts' },
                 { from: './app/images', to: 'images' },
+                { from: './app/js/script.js', to: 'js/script.js' },
             ]),
             new MiniCssExtractPlugin({
                 filename: devMode ? 'css/[name].css' : 'css/[name].[chunkhash].min.css',
